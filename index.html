@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPTV Premium Malaysia</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0f172a;color:#fff}
+
+/* HEADER */
+header{
+    height:100vh;
+    background:linear-gradient(135deg,#2563eb,#9333ea);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+header h1{font-size:42px;margin-bottom:15px}
+header p{font-size:18px;margin-bottom:25px}
+.btn{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+    text-decoration:none;
+    display:inline-block;
+    transition:0.3s;
+}
+.btn-primary{background:#22c55e;color:#000}
+.btn-primary:hover{background:#16a34a}
+
+/* SECTION */
+.section{padding:60px 20px;text-align:center}
+.section h2{margin-bottom:30px;font-size:28px;color:#38bdf8}
+
+/* CHANNEL GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+    max-width:1100px;
+    margin:auto;
+}
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+    transition:0.3s;
+}
+.card:hover{transform:translateY(-5px);background:#334155}
+
+/* PRICING */
+.pricing{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+.price-card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    width:280px;
+    transition:0.3s;
+}
+.price-card:hover{transform:scale(1.05)}
+.price{font-size:32px;margin:15px 0;color:#22c55e}
+
+/* LOGIN */
+.login-box{
+    max-width:350px;
+    margin:30px auto;
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+}
+.login-box input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+}
+
+/* FOOTER */
+footer{
+    background:#111827;
+    padding:25px;
+    font-size:13px;
+    line-height:1.6;
+    text-align:center;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:#fff;
+    padding:15px 18px;
+    border-radius:50%;
+    font-size:22px;
+    text-decoration:none;
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header>
+    <h1>📺 IPTV PREMIUM MALAYSIA</h1>
+    <p>1000+ Channel • HD/Full HD • Bayar Sekali Sahaja</p>
+    <a href="#pricing" class="btn btn-primary">Lihat Harga</a>
+</header>
+
+<!-- CHANNEL CATEGORY -->
+<section class="section">
+    <h2>Kategori Saluran</h2>
+    <div class="grid">
+        <div class="card">🇲🇾 Malaysia</div>
+        <div class="card">⚽ Sports</div>
+        <div class="card">🎬 Movies</div>
+        <div class="card">🌍 Documentary</div>
+        <div class="card">👶 Kids</div>
+        <div class="card">📰 News</div>
+        <div class="card">🇰🇷 Korean</div>
+        <div class="card">🇨🇳 Chinese</div>
+        <div class="card">🇮🇳 Indian</div>
+        <div class="card">🇮🇩 Indonesia</div>
+        <div class="card">🇸🇬 Singapore</div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+    <h2>Pakej Harga</h2>
+    <div class="pricing">
+        <div class="price-card">
+            <h3>Basic</h3>
+            <div class="price">RM59</div>
+            <p>1 Device</p>
+            <p>HD Channel</p>
+            <p>Warranty 6 Bulan</p>
+            <br>
+            <a href="https://wa.me/60123456789" class="btn btn-primary">Order Sekarang</a>
+        </div>
+
+        <div class="price-card">
+            <h3>Premium</h3>
+            <div class="price">RM99</div>
+            <p>2 Device</p>
+            <p>Full HD Channel</p>
+            <p>Warranty 1 Tahun</p>
+            <br>
+            <a href="https://wa.me/60123456789" class="btn btn-primary">Order Sekarang</a>
+        </div>
+
+        <div class="price-card">
+            <h3>Reseller</h3>
+            <div class="price">RM299</div>
+            <p>Panel Reseller</p>
+            <p>Boleh Jual Semula</p>
+            <p>Support 24/7</p>
+            <br>
+            <a href="https://wa.me/60123456789" class="btn btn-primary">Daftar Reseller</a>
+        </div>
+    </div>
+</section>
+
+<!-- LOGIN / RESELLER PANEL (DEMO) -->
+<section class="section">
+    <h2>Login Reseller</h2>
+    <div class="login-box">
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button class="btn btn-primary" style="width:100%">Login</button>
+    </div>
+</section>
+
+<footer>
+<strong>Disclaimer:</strong><br>
+Perkhidmatan IPTV disediakan sebagaimana adanya. Tidak semua saluran sentiasa boleh diakses 
+kerana maintenance atau gangguan teknikal. Lifetime bermaksud bayar sekali tanpa bulanan.
+</footer>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+<a href="https://wa.me/60123456789" class="whatsapp">💬</a>
+
+</body>
+</html>
