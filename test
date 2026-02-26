@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Android IPTV</title>
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+}
+header{
+    padding:40px;
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+}
+h1{margin:0;font-size:32px;}
+.container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:30px;
+}
+.card{
+    background:#1e293b;
+    padding:25px;
+    margin:15px;
+    border-radius:15px;
+    width:280px;
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+.price{
+    font-size:28px;
+    margin:15px 0;
+    color:#00ffcc;
+}
+button{
+    background:#00c853;
+    border:none;
+    padding:12px 20px;
+    color:white;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+button:hover{
+    background:#00e676;
+}
+footer{
+    margin-top:40px;
+    padding:20px;
+    background:#111827;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>MEDIA ANDROID IPTV</h1>
+    <p>Full Channel • Sport • Movie • Malaysia • International</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>BASIC</h2>
+        <div class="price">RM25 / 30 Hari</div>
+        <p>✔ Channel Malaysia</p>
+        <p>✔ Sport Channel</p>
+        <p>✔ SD/HD</p>
+        <button onclick="order('BASIC',30)">Order Sekarang</button>
+    </div>
+
+    <div class="card">
+        <h2>PREMIUM</h2>
+        <div class="price">RM40 / 30 Hari</div>
+        <p>✔ All Channel</p>
+        <p>✔ Sport + Movie + VOD</p>
+        <p>✔ Full HD</p>
+        <button onclick="order('PREMIUM',30)">Order Sekarang</button>
+    </div>
+
+    <div class="card">
+        <h2>LIFETIME</h2>
+        <div class="price">RM120</div>
+        <p>✔ All Channel</p>
+        <p>✔ Priority Support</p>
+        <p>✔ No Expiry*</p>
+        <button onclick="order('LIFETIME',3650)">Order Sekarang</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Media Android IPTV | WhatsApp Support 24 Jam
+</footer>
+
+<script>
+function kiraExpiry(hari){
+    let today = new Date();
+    today.setDate(today.getDate() + hari);
+    return today.toLocaleDateString('ms-MY');
+}
+
+function order(pakej,hari){
+    let expiry = kiraExpiry(hari);
+    let nombor = "601XXXXXXXXX"; // GANTI DENGAN NO WHATSAPP ABANG
+    let mesej = `Assalamualaikum, saya nak order ${pakej} IPTV.\n\nTempoh: ${hari} Hari\nExpiry: ${expiry}\n\nBoleh bagi detail pembayaran.`;
+    window.open(`https://wa.me/${nombor}?text=${encodeURIComponent(mesej)}`);
+}
+</script>
+
+</body>
+</html>
