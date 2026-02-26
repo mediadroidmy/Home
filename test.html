@@ -3,113 +3,257 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media Android IPTV</title>
+<title>Media Android IPTV Premium</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{
-    font-family: Arial;
+
+*{
     margin:0;
-    background:#0f172a;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#020617,#0f172a,#020617);
     color:white;
-    text-align:center;
 }
+
 header{
-    padding:40px;
-    background:linear-gradient(45deg,#00c6ff,#0072ff);
+    padding:60px 20px;
+    text-align:center;
+    background:linear-gradient(90deg,#00c6ff,#0072ff,#00c6ff);
+    background-size:200% 200%;
+    animation:gradientMove 6s infinite alternate;
 }
-h1{margin:0;font-size:32px;}
-.container{
+
+@keyframes gradientMove{
+    0%{background-position:left;}
+    100%{background-position:right;}
+}
+
+.logo{
+    font-size:36px;
+    font-weight:700;
+}
+
+.subtitle{
+    margin-top:10px;
+    opacity:0.9;
+}
+
+.features{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    padding:30px;
+    padding:20px;
+    gap:15px;
 }
+
+.feature{
+    background:#0f172a;
+    padding:10px 20px;
+    border-radius:20px;
+    border:1px solid #00c6ff;
+}
+
+.pricing{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:40px;
+    gap:30px;
+}
+
 .card{
-    background:#1e293b;
-    padding:25px;
-    margin:15px;
+    background:linear-gradient(180deg,#0f172a,#020617);
+    padding:30px;
+    width:300px;
+    border-radius:20px;
+    border:1px solid #1e293b;
+    transition:0.3s;
+    position:relative;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #00c6ff;
+}
+
+.popular{
+    position:absolute;
+    top:-12px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#00c6ff;
+    color:black;
+    padding:5px 15px;
     border-radius:15px;
-    width:280px;
-    box-shadow:0 0 15px rgba(0,0,0,0.5);
+    font-size:12px;
+    font-weight:600;
 }
+
+.plan{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
 .price{
-    font-size:28px;
-    margin:15px 0;
-    color:#00ffcc;
+    font-size:32px;
+    color:#00c6ff;
+    margin-bottom:15px;
 }
+
+ul{
+    list-style:none;
+    text-align:left;
+    margin-bottom:20px;
+}
+
+ul li{
+    margin:8px 0;
+}
+
 button{
-    background:#00c853;
+    width:100%;
+    padding:12px;
     border:none;
-    padding:12px 20px;
+    border-radius:10px;
+    background:linear-gradient(90deg,#00c853,#00e676);
     color:white;
     font-size:16px;
-    border-radius:8px;
+    font-weight:600;
     cursor:pointer;
 }
+
 button:hover{
-    background:#00e676;
+    transform:scale(1.05);
 }
+
 footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid #1e293b;
     margin-top:40px;
-    padding:20px;
-    background:#111827;
 }
+
 </style>
+
 </head>
 <body>
 
 <header>
-    <h1>MEDIA ANDROID IPTV</h1>
-    <p>Full Channel • Sport • Movie • Malaysia • International</p>
+
+<div class="logo">MEDIA ANDROID IPTV</div>
+<div class="subtitle">4K • Sport • Movie • Malaysia • International</div>
+
 </header>
 
-<div class="container">
+<div class="features">
 
-    <div class="card">
-        <h2>BASIC</h2>
-        <div class="price">RM25 / 30 Hari</div>
-        <p>✔ Channel Malaysia</p>
-        <p>✔ Sport Channel</p>
-        <p>✔ SD/HD</p>
-        <button onclick="order('BASIC',30)">Order Sekarang</button>
-    </div>
+<div class="feature">✔ 10,000+ Channel</div>
+<div class="feature">✔ Full HD / 4K</div>
+<div class="feature">✔ No Buffering</div>
+<div class="feature">✔ Support 24 Jam</div>
 
-    <div class="card">
-        <h2>PREMIUM</h2>
-        <div class="price">RM40 / 30 Hari</div>
-        <p>✔ All Channel</p>
-        <p>✔ Sport + Movie + VOD</p>
-        <p>✔ Full HD</p>
-        <button onclick="order('PREMIUM',30)">Order Sekarang</button>
-    </div>
+</div>
 
-    <div class="card">
-        <h2>LIFETIME</h2>
-        <div class="price">RM120</div>
-        <p>✔ All Channel</p>
-        <p>✔ Priority Support</p>
-        <p>✔ No Expiry*</p>
-        <button onclick="order('LIFETIME',3650)">Order Sekarang</button>
-    </div>
+<div class="pricing">
+
+<div class="card">
+
+<div class="plan">BASIC</div>
+<div class="price">RM25</div>
+
+<ul>
+<li>✔ Malaysia Channel</li>
+<li>✔ Sport Channel</li>
+<li>✔ HD Quality</li>
+<li>✔ 30 Hari</li>
+</ul>
+
+<button onclick="order('BASIC',30)">
+Order Sekarang
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="popular">POPULAR</div>
+
+<div class="plan">PREMIUM</div>
+<div class="price">RM40</div>
+
+<ul>
+<li>✔ All Channel</li>
+<li>✔ Movie + Sport</li>
+<li>✔ Full HD / 4K</li>
+<li>✔ 30 Hari</li>
+</ul>
+
+<button onclick="order('PREMIUM',30)">
+Order Sekarang
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="plan">LIFETIME</div>
+<div class="price">RM120</div>
+
+<ul>
+<li>✔ All Channel</li>
+<li>✔ 4K Quality</li>
+<li>✔ Priority Support</li>
+<li>✔ Lifetime Access</li>
+</ul>
+
+<button onclick="order('LIFETIME',3650)">
+Order Sekarang
+</button>
+
+</div>
 
 </div>
 
 <footer>
-    © 2026 Media Android IPTV | WhatsApp Support 24 Jam
+
+© 2026 Media Android IPTV  
+WhatsApp Support 24 Jam
+
 </footer>
 
 <script>
-function kiraExpiry(hari){
-    let today = new Date();
-    today.setDate(today.getDate() + hari);
-    return today.toLocaleDateString('ms-MY');
+
+function kiraExpiry(days){
+
+let d=new Date();
+d.setDate(d.getDate()+days);
+
+return d.toLocaleDateString('ms-MY');
+
 }
 
-function order(pakej,hari){
-    let expiry = kiraExpiry(hari);
-    let nombor = "601XXXXXXXXX"; // GANTI DENGAN NO WHATSAPP ABANG
-    let mesej = `Assalamualaikum, saya nak order ${pakej} IPTV.\n\nTempoh: ${hari} Hari\nExpiry: ${expiry}\n\nBoleh bagi detail pembayaran.`;
-    window.open(`https://wa.me/${nombor}?text=${encodeURIComponent(mesej)}`);
+function order(plan,days){
+
+let expiry=kiraExpiry(days);
+
+let phone="6014303571";
+
+let msg=`Assalamualaikum, saya nak order ${plan} IPTV
+
+Expiry: ${expiry}
+
+Boleh bagi detail pembayaran.`;
+
+window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
+
 }
+
 </script>
 
 </body>
